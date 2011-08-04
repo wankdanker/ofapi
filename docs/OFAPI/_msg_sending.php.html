@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Docs for page msg_sending.php</title>
+	<link rel="stylesheet" type="text/css" href="../media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="../media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">OFAPI<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                                      
+                      		[ <a href="../classtrees_OFAPI.html" class="menu">class tree: OFAPI</a> ]
+		[ <a href="../elementindex_OFAPI.html" class="menu">index: OFAPI</a> ]
+            [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">OFAPI</div>
+  <div class="package">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="../li_default.html">default</a><br />
+              <a href="../li_OFAPI.html">OFAPI</a><br />
+      	</div>
+      <br />
+                        <b>Files:</b><br />
+        <div class="package">
+				<span style="padding-left: 1em;"><a href="../OFAPI/_costants.php.html">costants.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_headers.php.html">headers.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_logging_module.php.html">logging_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_members_module.php.html">members_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_miscs_module.php.html">miscs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msgs_module.php.html">msgs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msg_sending.php.html">msg_sending.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ofapi.php.html">ofapi.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_shared.php.html">shared.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_stats_module.php.html">stats_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ucp_register.php.html">ucp_register.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_user_module.php.html">user_module.php</a></span><br />
+	  </div>
+            <br />
+                      </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Procedural File: msg_sending.php</h1>
+Source Location: /msg_sending.php<br /><br />
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Page Details</div>
+	<div class="nav-bar">
+					<span class="disabled">Page Details</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">
+				<table border="0" cellspacing="0" cellpadding="0">
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>v 1.0 2008/06/28</td></tr>
+			<tr><td><strong>Copyright:</strong>&nbsp;&nbsp;</td><td>(c) 2008 Roberto Beretta (roberto.alpha@gmail.com) &amp; Daniele Margutti (malcom.mac@gmail.com)</td></tr>
+			<tr><td><strong>Link:</strong>&nbsp;&nbsp;</td><td><a href="http://code.google.com/p/ofapi">http://code.google.com/p/ofapi</a></td></tr>
+			<tr><td><strong>License:</strong>&nbsp;&nbsp;</td><td><a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></td></tr>
+	</table>
+
+			</div>
+</div>
+
+
+
+
+
+	<a name="sec-functions"></a>
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Page Details</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">
+			<a name="functiondeletePost" id="functiondeletePost"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">deletePost</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 121]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer deletePost(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Delete post from a forum
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$forum_id</strong> 		<em>[integer]</em> 	specify forum id<br /></li><li><strong>$topic_id</strong> 		<em>[integer]</em> 	specify topic id<br /></li><li><strong>$post_id</strong> 		<em>[integer]</em> 	specify post id<br /></li><li><strong>$forumPassword</strong> 	<em>[integer]</em> 	specify password if needed<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td><strong>AVAILABLE ERRORS MESSAGES:</strong><br /><br /> <ul></ul><ul><li><strong>MSG_FORUM_ERR_FORUMPASSWORDED</strong>    forum is password protected and you have not specified a key<br /></li><li><strong>BOT_GO_HOME</strong>                    bot cannot act in this way (you have a bot?)<br /></li><li><strong>USER_CANNOT_READ_FORUM</strong>            user cannot read specified forum<br /></li><li><strong>USER_CANNOT_POST</strong>                user cannot post to this forum<br /></li><li><strong>FORUM_LOCKED</strong>                    specified forum is locked<br /></li><li><strong>NOT_AUTHORISED</strong>                    you're not authorized<br /><br /></li></ul>     <strong>WHEN MESSAGE IS POSTED THIS METHOD AN ARRAY WITH THESE KEYS:</strong><br /><br /> <ul><li><strong>'topic_id'</strong>     <em>[integer]</em>     id of the forum where you've posted<br /></li><li><strong>'forum_id'</strong>     <em>[integer]</em>     id of the new topic<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION COULD REQUIRE LOGIN DEPENDING BOARD LEADERS SETTINGS</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiondeleteTopic" id="functiondeleteTopic"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">deleteTopic</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 91]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer deleteTopic(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Delete topic from a forum
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$forum_id</strong> <em>[integer]</em> specify forum id</li><li><strong>$topic_id</strong> <em>[integer]</em> specify topic id</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td><strong>AVAILABLE ERRORS MESSAGES:</strong><br /><br /> <ul></ul><ul><li><strong>MSG_FORUM_ERR_FORUMPASSWORDED</strong>    forum is password protected and you have not specified a key<br /></li><li><strong>BOT_GO_HOME</strong>                    bot cannot act in this way (you have a bot?)<br /></li><li><strong>USER_CANNOT_READ_FORUM</strong>            user cannot read specified forum<br /></li><li><strong>USER_CANNOT_POST</strong>                user cannot post to this forum<br /></li><li><strong>FORUM_LOCKED</strong>                    specified forum is locked<br /></li></ul><ul><li><strong>'topic_id'</strong>     <em>[integer]</em>     id of the forum where you've posted<br /></li><li><strong>'forum_id'</strong>     <em>[integer]</em>     id of the new topic<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION COULD REQUIRE LOGIN DEPENDING BOARD LEADERS SETTINGS</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functioneditPostWithData" id="functioneditPostWithData"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">editPostWithData</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 232]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><b>AVAILABLE editPostWithData(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function allows you to edit a posted message (if you have enough rights to do it)
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$new_subject</strong> 		<em>[integer]</em> 	specify new subject<br /></li><li><strong>$new_message</strong> 		<em>[integer]</em> 	specify new message text<br /></li><li><strong>$forum_id</strong> 			<em>[integer]</em> 	specify forum id<br /></li><li><strong>$topic_id</strong> 			<em>[integer]</em> 	specify topic id<br /></li><li><strong>$post_id</strong> 			<em>[integer]</em> 	specify post id<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>ERRORS MESSAGES:&lt;/b&gt;<br /><br /> <ul></ul><ul><li><strong>MSG_FORUM_ERR_FORUMPASSWORDED</strong>    forum is password protected and you have not specified a key<br /></li><li><strong>BOT_GO_HOME</strong>                    bot cannot act in this way (you have a bot?)<br /></li><li><strong>USER_CANNOT_READ_FORUM</strong>            user cannot read specified forum<br /></li><li><strong>USER_CANNOT_POST</strong>                user cannot post to this forum<br /></li><li><strong>FORUM_LOCKED</strong>                    specified forum is locked<br /></li><li><strong>NOT_AUTHORISED</strong>                    you're not authorized<br /><br /></li></ul>     <strong>WHEN MESSAGE IS POSTED THIS METHOD AN ARRAY WITH THESE KEYS:</strong><br /><br /> <ul><li><strong>'post_subject'</strong>     <em>[integer]</em>     subject of the message<br /></li><li><strong>'post_text'</strong>         <em>[integer]</em>     text of the message<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION COULD REQUIRE LOGIN DEPENDING BOARD LEADERS SETTINGS</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetPostText" id="functiongetPostText"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getPostText</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 197]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><b>AVAILABLE getPostText(
+ $forum_id,  $topic_id,  $post_id,  $forumPassword&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return both subject and text of choosed post id
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$forum_id</strong> 		<em>[integer]</em> 	specify destination forum id<br /></li><li><strong>$topic_id</strong> 		<em>[integer]</em> 	specify topic id<br /></li><li><strong>$post_id</strong> 		<em>[integer]</em> 	specify post id<br /></li><li><strong>$forumPassword</strong> 	<em>[string]</em> 	specify password string<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$forum_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$topic_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$post_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$forumPassword:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>ERRORS MESSAGES:&lt;/b&gt;<br /><br /> <ul></ul><ul><li><strong>MSG_FORUM_ERR_FORUMPASSWORDED</strong>    forum is password protected and you have not specified a key<br /></li><li><strong>BOT_GO_HOME</strong>                    bot cannot act in this way (you have a bot?)<br /></li><li><strong>USER_CANNOT_READ_FORUM</strong>            user cannot read specified forum<br /></li><li><strong>USER_CANNOT_POST</strong>                user cannot post to this forum<br /></li><li><strong>FORUM_LOCKED</strong>                    specified forum is locked<br /></li><li><strong>NOT_AUTHORISED</strong>                    you're not authorized<br /><br /></li></ul>     <strong>WHEN MESSAGE IS POSTED THIS METHOD AN ARRAY WITH THESE KEYS:</strong><br /><br /> <ul><li><strong>'post_subject'</strong>     <em>[integer]</em>     subject of the message<br /></li><li><strong>'post_text'</strong>         <em>[integer]</em>     text of the message<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION COULD REQUIRE LOGIN DEPENDING BOARD LEADERS SETTINGS</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionpostNewTopic" id="functionpostNewTopic"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">postNewTopic</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 159]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><b>AVAILABLE postNewTopic(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function is used to post a new topic to a given forum
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$subject</strong> 				<em>[string]</em> 			specify your topic subject<br /></li><li><strong>$message</strong> 				<em>[string]</em> 			specify your message text<br /></li><li><strong>$forum_id</strong> 				<em>[integer]</em> 			specify destination forum id<br /></li><li><strong>$type</strong> 					<em>[integer]</em> 			POST_NORMAL or POST_STICKY<br /></li><li><strong>$enableBBCode</strong> 			<em>[boolean/optional]</em> 	enable bbcode symbols<br /></li><li><strong>$enable_smiles</strong> 			<em>[boolean/optional]</em> 	enable graphical smiles encoding<br /></li><li><strong>$enable_urls</strong> 			<em>[boolean/optional]</em> 	enable url links in post<br /></li><li><strong>$enable_sign</strong> 			<em>[boolean/optional]</em> 	insert logged signature (if available) at the bottom of the post<br /></li><li><strong>$forumPassword</strong> 			<em>[string]</em> 			specify password string<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>ERRORS MESSAGES:&lt;/b&gt;<br /><br /> <ul></ul><ul><li><strong>MSG_FORUM_ERR_FORUMPASSWORDED</strong>    forum is password protected and you have not specified a key<br /></li><li><strong>BOT_GO_HOME</strong>                    bot cannot act in this way (you have a bot?)<br /></li><li><strong>USER_CANNOT_READ_FORUM</strong>            user cannot read specified forum<br /></li><li><strong>USER_CANNOT_POST</strong>                user cannot post to this forum<br /></li><li><strong>FORUM_LOCKED</strong>                    specified forum is locked<br /></li><li><strong>NOT_AUTHORISED</strong>                    you're not authorized<br /><br /></li></ul>     <strong>WHEN MESSAGE IS POSTED THIS METHOD AN ARRAY WITH THESE KEYS:</strong><br /><br /> <ul><li><strong>'topic_id'</strong>     <em>[integer]</em>     id of the forum where you've posted<br /></li><li><strong>'forum_id'</strong>     <em>[integer]</em>     id of the new topic<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION COULD REQUIRE LOGIN DEPENDING BOARD LEADERS SETTINGS</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionreplyToPost" id="functionreplyToPost"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">replyToPost</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 54]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer replyToPost(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Reply to a post id in a given forum
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$subject</strong> 			<em>[string]</em> 			specify your topic subject <br /></li><li><strong>$message</strong> 			<em>[string]</em> 			specify your message text <br /></li><li><strong>$forum_id</strong> 			<em>[integer]</em>		 	specify destination forum id <br /></li><li><strong>$topic_id</strong> 			<em>[integer]</em> 			specify topic id <br /></li><li><strong>$post_id</strong> 			<em>[boolean/optional]</em> 	specify post id <br /></li><li><strong>$enable_bbcode</strong> 		<em>[boolean/optional]</em> 	enable bbcodes <br /></li><li><strong>$enable_smiles</strong> 		<em>[boolean/optional]</em> 	enable graphical smiles encoding <br /></li><li><strong>$enable_urls</strong>			<em>[boolean/optional]</em> 	enable url links in post <br /></li><li><strong>$enable_sign</strong> 		<em>[boolean/optional]</em> 	insert logged signature (if available) at the bottom of the post <br /></li><li><strong>$forumPassword</strong> 		<em>[string]</em> 			forum password is the forum is protected <br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td><strong>AVAILABLE ERRORS MESSAGES:</strong><br /><br />             ----------------------------------------- <ul></ul><ul><li><strong>MSG_FORUM_ERR_FORUMPASSWORDED</strong>    forum is password protected and you have not specified a key<br /></li><li><strong>BOT_GO_HOME</strong>                    bot cannot act in this way (you have a bot?)<br /></li><li><strong>USER_CANNOT_READ_FORUM</strong>            user cannot read specified forum<br /></li><li><strong>USER_CANNOT_POST</strong>                user cannot post to this forum<br /></li><li><strong>FORUM_LOCKED</strong>                    specified forum is locked<br /></li><li><strong>NOT_AUTHORISED</strong>                    you're not authorized<br /><br />
+<br />
+    <strong>WHEN MESSAGE IS POSTED THIS METHOD AN ARRAY WITH THESE KEYS:</strong><br /><br /></li><li><strong>'topic_id'</strong>     <em>[integer]</em>     id of the forum where you've posted<br /></li><li><strong>'forum_id'</strong>     <em>[integer]</em>     id of the new topic<br /></li><li><strong>'post_id'</strong>         <em>[integer]</em>     the id of the new message</li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION COULD REQUIRE LOGIN DEPENDING BOARD LEADERS SETTINGS</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_postNewMessage" id="function_postNewMessage"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">_postNewMessage</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 245]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _postNewMessage(
+ $subject,  $message,  $forum_id, [ $typeOfPost = POST_NORMAL], [ $enableBBCode = true], [ $enable_smiles = true], [ $enable_urls = true], [ $enable_sign = true],  $forumPassword&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$subject:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$message:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$forum_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$typeOfPost:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$enableBBCode:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$enable_smiles:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$enable_urls:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$enable_sign:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$forumPassword:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+		</div>
+	</div><br />
+
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 30 Jul 2008 11:02:33 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.1</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

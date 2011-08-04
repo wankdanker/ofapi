@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Docs For Class IXR_IntrospectionServer</title>
+	<link rel="stylesheet" type="text/css" href="../media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="../media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">default<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                        
+                                    		[ <a href="../classtrees_default.html" class="menu">class tree: default</a> ]
+		[ <a href="../elementindex_default.html" class="menu">index: default</a> ]
+            [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">default</div>
+  <div class="package">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="../li_default.html">default</a><br />
+              <a href="../li_OFAPI.html">OFAPI</a><br />
+      	</div>
+      <br />
+                        <b>Files:</b><br />
+        <div class="package">
+				<span style="padding-left: 1em;"><a href="../default/_xmlrpc.php.html">xmlrpc.php</a></span><br />
+	  </div>
+            <br />
+                  <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../default/IXR_Base64.html">IXR_Base64</a>    	 <br />
+	    		<a href="../default/IXR_Client.html">IXR_Client</a>    	 <br />
+	    		<a href="../default/IXR_ClientMulticall.html">IXR_ClientMulticall</a>    	 <br />
+	    		<a href="../default/IXR_Date.html">IXR_Date</a>    	 <br />
+	    		<a href="../default/IXR_Error.html">IXR_Error</a>    	 <br />
+	    		<a href="../default/IXR_IntrospectionServer.html">IXR_IntrospectionServer</a>    	 <br />
+	    		<a href="../default/IXR_Message.html">IXR_Message</a>    	 <br />
+	    		<a href="../default/IXR_Request.html">IXR_Request</a>    	 <br />
+	    		<a href="../default/IXR_Server.html">IXR_Server</a>    	 <br />
+	    		<a href="../default/IXR_Value.html">IXR_Value</a>    	 <br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: IXR_IntrospectionServer</h1>
+Source Location: /xmlrpc.php<br /><br />
+
+<h2 class="class-name">Class IXR_IntrospectionServer</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Class Overview</div>
+	<div class="nav-bar">
+					<span class="disabled">Class Overview</span>
+						
+					| <a href="#sec-inherited">Inherited Properties, Constants, and Methods</a>
+											| <a href="#sec-var-summary">Property Summary</a> | <a href="#sec-vars">Properties Detail</a>
+														| <a href="#sec-method-summary">Method Summary</a> | <a href="#sec-methods">Methods Detail</a>
+								</div>
+	<div class="info-box-body">
+		<table width="100%" border="0">
+		<tr><td valign="top" width="60%" class="class-overview">
+
+        		
+		<p class="notes">
+			Located in <a class="field" href="_xmlrpc.php.html">/xmlrpc.php</a> [<span class="field">line 661</span>]
+		</p>
+
+		
+		<pre><a href="../default/IXR_Server.html">IXR_Server</a>
+   |
+   --IXR_IntrospectionServer</pre>
+
+		
+		
+		
+		</td>
+
+				<td valign="top" width="20%" class="class-overview">
+		<p align="center" class="short-description"><strong><a href="#sec_vars">Properties</a></strong></p>
+		<ul>
+		  		  <li><a href="../default/IXR_IntrospectionServer.html#var$help">$help</a></li>
+		  		  <li><a href="../default/IXR_IntrospectionServer.html#var$signatures">$signatures</a></li>
+		  		</ul>
+		</td>
+		
+				<td valign="top" width="20%" class="class-overview">
+		<p align="center" class="short-description"><strong><a href="#sec_methods">Methods</a></strong></p>
+		<ul>
+		  		  <li><a href="../default/IXR_IntrospectionServer.html#methodIXR_IntrospectionServer">IXR_IntrospectionServer</a></li>
+		  		  <li><a href="../default/IXR_IntrospectionServer.html#methodaddCallback">addCallback</a></li>
+		  		  <li><a href="../default/IXR_IntrospectionServer.html#methodcall">call</a></li>
+		  		  <li><a href="../default/IXR_IntrospectionServer.html#methodmethodHelp">methodHelp</a></li>
+		  		  <li><a href="../default/IXR_IntrospectionServer.html#methodmethodSignature">methodSignature</a></li>
+		  		</ul>
+		</td>
+		
+		</tr></table>
+		<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+</div>
+
+
+	<a name="sec-inherited"></a>
+	<div class="info-box">
+		<div class="info-box-title">Inherited Properties, Constants, and Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Class Overview</a>
+						| <span class="disabled">Inherited Properties, Constants, and Methods</span>
+												| <a href="#sec-var-summary">Property Summary</a> | <a href="#sec-vars">Properties Detail</a>
+																			| <a href="#sec-method-summary">Method Summary</a> | <a href="#sec-methods">Methods Detail</a>
+							    				</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header" width="30%">Inherited Properties</th>
+					<th class="class-table-header" width="40%">Inherited Methods</th>
+					<th class="class-table-header" width="30%">Inherited Constants</th>
+				</tr>
+				<tr>
+					<td width="30%">
+													<p>Inherited From <span class="classname"><a href="../default/IXR_Server.html">IXR_Server</a></span></p>
+							<blockquote>
+								<dl>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#var$callbacks">IXR_Server::$callbacks</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#var$capabilities">IXR_Server::$capabilities</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#var$data">IXR_Server::$data</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#var$message">IXR_Server::$message</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																	</dl>
+							</blockquote>
+											</td>
+					<td width="40%">
+													<p>Inherited From <span class="classname"><a href="../default/IXR_Server.html">IXR_Server</a></span></p>
+							<blockquote>
+								<dl>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodIXR_Server">IXR_Server::IXR_Server()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodcall">IXR_Server::call()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methoderror">IXR_Server::error()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodgetCapabilities">IXR_Server::getCapabilities()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodhasMethod">IXR_Server::hasMethod()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodlistMethods">IXR_Server::listMethods()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodmultiCall">IXR_Server::multiCall()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodoutput">IXR_Server::output()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodserve">IXR_Server::serve()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodsetCallbacks">IXR_Server::setCallbacks()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																			<dt>
+											<span class="method-definition"><a href="../default/IXR_Server.html#methodsetCapabilities">IXR_Server::setCapabilities()</a></span>
+										</dt>
+										<dd>
+											<span class="method-definition"></span>
+										</dd>
+																	</dl>
+							</blockquote>
+											</td>
+					<td width="30%">
+											</td>
+				</tr>
+			</table>
+			<br /><div class="top">[ <a href="#top">Top</a> ]</div>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Property Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Class Overview</a>
+										| <a href="#sec-inherited">Inherited Properties and Methods</a>
+						| <span class="disabled">Property Summary</span> | <a href="#sec-vars">Properties Detail</a>
+												| <a href="#sec-method-summary">Method Summary</a> | <a href="#sec-methods">Methods Detail</a>
+							    				</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+			<table border="0" cellspacing="0" cellpadding="0" class="var-summary">
+																									<div class="var-title">
+					<tr><td class="var-title"><span class="var-type-summary">mixed</span>&nbsp;&nbsp;</td>
+					<td class="var-title"><a href="#$help" title="details" class="var-name-summary">$help</a>&nbsp;&nbsp;</td>
+					<td class="var-summary-description"></td></tr>
+				</div>
+													<div class="var-title">
+					<tr><td class="var-title"><span class="var-type-summary">mixed</span>&nbsp;&nbsp;</td>
+					<td class="var-title"><a href="#$signatures" title="details" class="var-name-summary">$signatures</a>&nbsp;&nbsp;</td>
+					<td class="var-summary-description"></td></tr>
+				</div>
+										</table>
+			</div>
+			<br /><div class="top">[ <a href="#top">Top</a> ]</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Class Overview</a>
+										| <a href="#sec-inherited">Inherited Properties and Methods</a>
+															| <a href="#sec-var-summary">Property Summary</a> | <a href="#sec-vars">Properties Detail</a>
+							    					| <span class="disabled">Method Summary</span> | <a href="#sec-methods">Methods Detail</a>
+		</div>
+		<div class="info-box-body">
+			<div class="method-summary">
+				<table border="0" cellspacing="0" cellpadding="0" class="method-summary">
+																																																								<div class="method-definition">
+											<tr><td class="method-definition"><span class="method-result">IXR_IntrospectionServer</span>&nbsp;&nbsp;</td>
+										<td class="method-definition"><a href="#IXR_IntrospectionServer" title="details" class="method-name">IXR_IntrospectionServer</a>()&nbsp;&nbsp;</td>
+					<td class="method-definition"></td></tr>
+				</div>
+																<div class="method-definition">
+											<tr><td class="method-definition"><span class="method-result">void</span>&nbsp;&nbsp;</td>
+										<td class="method-definition"><a href="#addCallback" title="details" class="method-name">addCallback</a>()&nbsp;&nbsp;</td>
+					<td class="method-definition"></td></tr>
+				</div>
+																<div class="method-definition">
+											<tr><td class="method-definition"><span class="method-result">void</span>&nbsp;&nbsp;</td>
+										<td class="method-definition"><a href="#call" title="details" class="method-name">call</a>()&nbsp;&nbsp;</td>
+					<td class="method-definition"></td></tr>
+				</div>
+																<div class="method-definition">
+											<tr><td class="method-definition"><span class="method-result">void</span>&nbsp;&nbsp;</td>
+										<td class="method-definition"><a href="#methodHelp" title="details" class="method-name">methodHelp</a>()&nbsp;&nbsp;</td>
+					<td class="method-definition"></td></tr>
+				</div>
+																<div class="method-definition">
+											<tr><td class="method-definition"><span class="method-result">void</span>&nbsp;&nbsp;</td>
+										<td class="method-definition"><a href="#methodSignature" title="details" class="method-name">methodSignature</a>()&nbsp;&nbsp;</td>
+					<td class="method-definition"></td></tr>
+				</div>
+												</table>
+			</div>
+			<br /><div class="top">[ <a href="#top">Top</a> ]</div>
+		</div>
+	</div>
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Properties</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Class Overview</a>
+										| <a href="#sec-inherited">Inherited Properties and Methods</a>
+										| <a href="#sec-var-summary">Property Summary</a> | <span class="disabled">Properties Detail</span>
+															| <a href="#sec-method-summary">Method Summary</a> | <a href="#sec-methods">Methods Detail</a>
+												</div>
+		<div class="info-box-body">
+			<a name="var$help" id="$help"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>&nbsp;&nbsp;
+			<span class="var-name">$help</span>
+						<span class="smalllinenumber">[line 663]</span>
+		</span>
+	</div>
+
+		
+
+	
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+<a name="var$signatures" id="$signatures"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>&nbsp;&nbsp;
+			<span class="var-name">$signatures</span>
+						<span class="smalllinenumber">[line 662]</span>
+		</span>
+	</div>
+
+		
+
+	
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+		</div>
+	</div>
+
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Class Overview</a>
+										| <a href="#sec-inherited">Inherited Properties and Methods</a>
+															| <a href="#sec-var-summary">Property Summary</a> | <a href="#sec-vars">Properties Detail</a>
+																	| <a href="#sec-method-summary">Method Summary</a> | <span class="disabled">Methods Detail</span>
+					</div>
+		<div class="info-box-body">
+			<a name='method_detail'></a>
+
+<a name="methodIXR_IntrospectionServer" id="IXR_IntrospectionServer"><!-- --></a>
+<div class="oddrow">
+
+<div class="method-header">
+	<span class="method-title">Constructor IXR_IntrospectionServer</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 664]</span>
+</div>
+<br />
+
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">&nbsp;
+		<code>IXR_IntrospectionServer IXR_IntrospectionServer(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br /></div>
+
+	
+	<br />
+	
+
+		
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+<a name="methodaddCallback" id="addCallback"><!-- --></a>
+<div class="evenrow">
+
+<div class="method-header">
+	<span class="method-title">addCallback</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 696]</span>
+</div>
+<br />
+
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">&nbsp;
+		<code>void addCallback(
+
+$method, 
+$callback, 
+$args, 
+$help&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table><br /></div>
+
+	
+			<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$method:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$callback:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$help:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+
+	<br />
+	
+
+		
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+<a name="methodcall" id="call"><!-- --></a>
+<div class="oddrow">
+
+<div class="method-header">
+	<span class="method-title">call</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 701]</span>
+</div>
+<br />
+
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">&nbsp;
+		<code>void call(
+
+$methodname, 
+$args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table><br /></div>
+
+	
+			<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$methodname:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+
+	<br />
+	
+
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/IXR_Server.html#methodcall">IXR_Server::call()</a></dt>
+					</dl>
+		
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+<a name="methodmethodHelp" id="methodHelp"><!-- --></a>
+<div class="evenrow">
+
+<div class="method-header">
+	<span class="method-title">methodHelp</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 800]</span>
+</div>
+<br />
+
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">&nbsp;
+		<code>void methodHelp(
+
+$method&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table><br /></div>
+
+	
+			<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$method:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+
+	<br />
+	
+
+		
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+<a name="methodmethodSignature" id="methodSignature"><!-- --></a>
+<div class="oddrow">
+
+<div class="method-header">
+	<span class="method-title">methodSignature</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 762]</span>
+</div>
+<br />
+
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">&nbsp;
+		<code>void methodSignature(
+
+$method&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table><br /></div>
+
+	
+			<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$method:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+
+	<br />
+	
+
+		
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+		</div>
+	</div>
+
+
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 30 Jul 2008 11:02:35 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.1</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

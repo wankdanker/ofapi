@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Docs for page user_module.php</title>
+	<link rel="stylesheet" type="text/css" href="../media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="../media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">OFAPI<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                                      
+                      		[ <a href="../classtrees_OFAPI.html" class="menu">class tree: OFAPI</a> ]
+		[ <a href="../elementindex_OFAPI.html" class="menu">index: OFAPI</a> ]
+            [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">OFAPI</div>
+  <div class="package">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="../li_default.html">default</a><br />
+              <a href="../li_OFAPI.html">OFAPI</a><br />
+      	</div>
+      <br />
+                        <b>Files:</b><br />
+        <div class="package">
+				<span style="padding-left: 1em;"><a href="../OFAPI/_costants.php.html">costants.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_headers.php.html">headers.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_logging_module.php.html">logging_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_members_module.php.html">members_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_miscs_module.php.html">miscs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msgs_module.php.html">msgs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msg_sending.php.html">msg_sending.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ofapi.php.html">ofapi.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_shared.php.html">shared.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_stats_module.php.html">stats_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ucp_register.php.html">ucp_register.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_user_module.php.html">user_module.php</a></span><br />
+	  </div>
+            <br />
+                      </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Procedural File: user_module.php</h1>
+Source Location: /user_module.php<br /><br />
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Page Details</div>
+	<div class="nav-bar">
+					<span class="disabled">Page Details</span> |
+									<a href="#sec-includes">Includes</a>
+			|											<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">
+				<table border="0" cellspacing="0" cellpadding="0">
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>v 1.0 2008/06/28</td></tr>
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.1 (2008/07/29) <strong>Fixed:</strong> countUnreadPrivateMessages() - <strong>Added</strong>: setPrivateMessageAsRead(),getUnreadPrivateMessages(),sendPrivateMessage(),sendEmailToUser()</td></tr>
+			<tr><td><strong>Copyright:</strong>&nbsp;&nbsp;</td><td>(c) 2008 Roberto Beretta &amp; Daniele Margutti</td></tr>
+			<tr><td><strong>Link:</strong>&nbsp;&nbsp;</td><td><a href="http://code.google.com/p/ofapi">http://code.google.com/p/ofapi</a></td></tr>
+			<tr><td><strong>License:</strong>&nbsp;&nbsp;</td><td><a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></td></tr>
+	</table>
+
+			</div>
+</div>
+
+
+	<a name="sec-includes"></a>
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Page Details</a> |
+						<span class="disabled">Includes</span>
+			|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">
+			<a name="_$phpbb_root_path_/includes/functions_privmsgs_php"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">$phpbb_root_path.'/includes/functions_privmsgs.php'</span>)
+			<span class="smalllinenumber">[line 24]</span>
+		</span>
+	</div>
+
+		
+		<div class="top">[ <a href="#top">Top</a> ]</div>
+		<br />
+</div>
+<a name="_headers_php"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../OFAPI/_headers.php.html">'headers.php'</a></span>)
+			<span class="smalllinenumber">[line 21]</span>
+		</span>
+	</div>
+
+		
+		<div class="top">[ <a href="#top">Top</a> ]</div>
+		<br />
+</div>
+		</div>
+	</div><br />
+
+
+
+	<a name="sec-functions"></a>
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Page Details</a> |
+										<a href="#sec-includes">Includes</a>
+				|												<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">
+			<a name="functioncountUnreadPrivateMessages" id="functioncountUnreadPrivateMessages"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">countUnreadPrivateMessages</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 34]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer countUnreadPrivateMessages(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the number of unread private messages about currently logged user
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>the number of unread private messages</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetBookmarkedTopics" id="functiongetBookmarkedTopics"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getBookmarkedTopics</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 301]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>dictionary getBookmarkedTopics(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the bookmarked topic of currently logged user.
+</strong></p>
+<span class="description"><p><ul><li><em>$logging_date</em> 	[integer] 	unix date since user login (it will be used to get first new post id and first page index with new posts)</li><li><em>$postPerPage</em> 	[integer] 	number of posts per page</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>Results include the list of bookmarked topics. Each object include these keys:<br /><br /> <ul><li><strong>'items'</strong> an array with object with these keys:<br /><br />
+                       <strong>'bookmarked'</strong>                 [boolean]     is topic bookmarked by logged user? (anonymous is obvisiuly false)
+                       <strong>'topic_id'</strong>                     [integer]    id of the topic<br />
+                       <strong>'topic_title'</strong>                 [string]    title of the topic<br />
+                       <strong>'topic_poster'</strong>                 [integer]    id of the author<br />
+                       <strong>'topic_time'</strong>                 [integer]    date of creation in unix format<br />
+                       <strong>'topic_views'</strong>                 [integer]    number of views<br />
+                       <strong>'topic_replies'</strong>                 [integer]    number of replies to topic<br />
+                       <strong>'topic_status'</strong>                 [integer]    status of topic<br />
+                       <strong>'topic_first_post_id'</strong>         [integer]    id of the first message of the topic<br />
+                       <strong>'topic_first_poster_name'</strong>     [string]    name of the author of first message of the topic<br />
+                       <strong>'topic_last_post_id'</strong>         [integer]    id of the last post in topic<br />
+                       <strong>'topic_last_poster_name'</strong>     [string]    name of the author of last reply on topic<br />
+                       <strong>'topic_last_post_time'</strong>         [integer]    send date in unix format of last reply<br />
+                       <strong>'topic_last_view_time'</strong>         [integer]    the time when last people has visited the topic in unix format<br />
+                       <strong>'first_new_page'</strong>             [integer]    the first page you need to load the first new message<br />
+                       <strong>'first_new_postid'</strong>             [integer]    this the id of the first unread new post from the topic<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetContentOfFolderWithID" id="functiongetContentOfFolderWithID"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getContentOfFolderWithID</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 562]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getContentOfFolderWithID(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return a list of messages contained in a specified folder given by it's $folder_id.<br />
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$folderId</strong> <em>[integer]</em> the ID of target folder we want to see<br /></li><li><strong>$userId</strong> <em>[integer]</em> the ID of target folder we want to see<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>an array with pvt messages object that contains keys:<br /><br /> <ul><li><strong>'msg_id'</strong>             <em>[integer]</em>         id of the message<br /></li><li><strong>'author_id'</strong>         <em>[integer]</em>         author of message<br /></li><li><strong>'to_address'</strong>         <em>[string]</em>         destination users (in form u_&lt;USERID&gt;:u_&lt;USERID_2&gt;)<br /></li><li><strong>'unread_messages'</strong>     <em>[integer]</em>         number of unread messages into that folder<br /></li><li><strong>'message_time'</strong>     <em>[long integer]</em>     sender time (in unix format)<br /></li><li><strong>'message_subject'</strong>     <em>[string]</em>         subject of the message<br /></li><li><strong>'pm_unread'</strong>         <em>[integer]</em>         number of unread private messages into the folder<br /></li><li><strong>'pm_new'</strong>             <em>[integer]</em>         number of new private messages into the folder<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetInboxFolder" id="functiongetInboxFolder"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getInboxFolder</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 536]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getInboxFolder(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return the list of elements in inbox folder.<br />  See getContentOfFolderWithID function to know what it return.
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetMeProfile" id="functiongetMeProfile"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getMeProfile</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 594]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getMeProfile(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return the profile of currently logged user
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>see getUserProfileFrom() method</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetMessagesFolders" id="functiongetMessagesFolders"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getMessagesFolders</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 492]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>an getMessagesFolders(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return a list with custom user defined private messages folders.<br />  From this list you can't see inbox, outbox and sent messages folders (use related methods)<br />  Use getContentOfFolderWithID function to get it's contents.
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>array of folders. Each object (it's a folder) contains these keys:<br /><br /> <ul><li><strong>'folder_id'</strong>         <em>[integer]</em>     id of the folder<br /></li><li><strong>'folder_name'</strong>         <em>[string]</em>     name of the folder<br /></li><li><strong>'num_messages'</strong>     <em>[integer]</em>     number of messages in folder<br /></li><li><strong>'unread_messages'</strong>     <em>[integer]</em>     number of unread messages into that folder</li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetOnlineFriends" id="functiongetOnlineFriends"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getOnlineFriends</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 204]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getOnlineFriends(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the list of online friends of currently logged user  <br /><strong>PARAMETERS:</strong><br /> <ul><li><em>$limitNumberTo</em> [integer] limit number of results</li></ul>
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>it will return an array of friends; each object contains:<br /><br />                 <strong>'user_id'</strong>         <em>[integer]</em>         user id of the friend<br />                 <strong>'username'</strong>         <em>[string]</em>         user name<br />                 <strong>'online_time'</strong>     <em>[long integer]</em>     nline time (in unix format)</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetOutboxFolder" id="functiongetOutboxFolder"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getOutboxFolder</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 522]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getOutboxFolder(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return the list of elements in outbox folder.<br />  See getContentOfFolderWithID function to know what it return.
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetUnreadPrivateMessages" id="functiongetUnreadPrivateMessages"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getUnreadPrivateMessages</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 80]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getUnreadPrivateMessages(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the list of unread private messages in your inboxes<br /><br />
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong><br /> <ul><li>[integer] 	<strong>$msg_id</strong> 		[integer]	target message id</li><li>[integer] 	<strong>$folder_id</strong> 	[integer]	parent folder id (where the message is located)</li></ul></p></span>
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>a list with private messages. Each object is a dictionary with these keys:<br /> <ul><li><strong>'msg_id'</strong>            [integer]        the message unique id<br /></li><li><strong>'user_id'</strong>            [integer]        the author user id<br /></li><li><strong>'username'</strong>            [string]        the author username<br /></li><li><strong>'message_time'</strong>        [integer]        the message creation date in unix format (time interval '70)<br /></li><li><strong>'message_subject'</strong>     [string]        subject of the message<br /></li><li><strong>'folder_id'</strong>        [integer]        parent folder unique id</li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetUserProfileFrom" id="functiongetUserProfileFrom"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getUserProfileFrom</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 651]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getUserProfileFrom(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return some informations about gived user id or username
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$data_type</strong> <em>[integer]</em> <strong>0</strong> if you have it's user id and you wnat to know more, <strong>1</strong> if you have it's username</li><li><strong>$dataValue</strong> <em>[integer]</em> you need to put here user id or username accorsind to $dataType<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>with infos about profile<br /> <ul><li><strong>'user_id'</strong>                 <em>[integer]</em> id of the user<br /></li><li><strong>'user_type'</strong>                 <em>[integer]</em> type of user (USER_NORMAL = 0, USER_INACTIVE = 1, USER_IGNORE = 2, USER_FOUNDER = 3)<br /></li><li><strong>'user_regdate'</strong>             <em>[long integer]</em> user registration date in unix format<br /></li><li><strong>'user_birthday'</strong>             <em>[string]</em> birthday in MM-DD-YYYY format<br /></li><li><strong>'user_lastvisit'</strong>         <em>[long integer]</em> last visit time in unix format<br /></li><li><strong>'user_lastpost_time'</strong>     <em>[long integer]</em> time of last post from the user in unix format<br /></li><li><strong>'user_posts'</strong>             <em>[integer]</em> number of user's posts<br /></li><li><strong>'user_lang'</strong>                 <em>[string]</em> user language (it,en...)<br /></li><li><strong>'user_rank'</strong>                 <em>[integer]</em> the rank value of the user<br /></li><li><strong>'user_allow_pm'</strong>             <em>[boolean]</em> user allow private messages<br /></li><li><strong>'user_avatar'</strong>             <em>[string]</em> avatar local path<br /></li><li><strong>'user_avatar_width'</strong>         <em>[integer]</em> width of the avatar picture<br /></li><li><strong>'user_avatar_height'</strong>     <em>[integer]</em> height of the avatar picture<br /></li><li><strong>'user_sig'</strong>                 <em>[string]</em> signature string if available<br /></li><li><strong>'user_icq'</strong>                 <em>[string]</em> icq contact<br /></li><li><strong>'user_aim'</strong>                 <em>[string]</em> aim contact<br /></li><li><strong>'user_yim'</strong>                 <em>[string]</em> yim contact<br /></li><li><strong>'user_msnm'</strong>                 <em>[string]</em> msn contact<br /></li><li><strong>'user_jabber'</strong>             <em>[string]</em> jabber contact<br /></li><li><strong>'user_interests'</strong>         <em>[string]</em> users interests<br /></li><li><strong>'user_website'</strong>             <em>[string]</em> user web site<br /></li><li><strong>'posts_per_day'</strong>             <em>[integer]</em> average number of posts per day<br /></li><li><strong>'inactive_reason'</strong>         <em>[string]</em> if the user is inactive this string contain the reason<br /></li><li><strong>'memberdays'</strong>             <em>[integer]</em> days passed since subscription<br /></li><li><strong>'html_avatar'</strong>             <em>[string]</em> html string for avatar picture<br /></li><li>--------------------------
+            <br /><strong>ERRORS:</strong><br /></li><li><strong>USERPROFILE_VIEW_NOTALLOWED</strong>                 you cannot view profiles because board leaders don't allow you to do it<br /></li><li><strong>USERPROFILE_VIEW_NOTALLOWEDANONYMOUS</strong>         you can't view profiles without logging in<br /></li><li><strong>GENERAL_ERROR</strong>                                 general error<br /></li><li><strong>USERPROFILE_VIEW_NONEXISTINGMEMBER</strong>         member does not exists (or you can't see it for some reason)<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THE RESULT OF THIS FUNCTION DEPENDS ACCESS RIGHTS ON BOARD</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionisTopicIDBookmarked" id="functionisTopicIDBookmarked"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">isTopicIDBookmarked</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 358]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean isTopicIDBookmarked(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return if a topic id is bookmarked by the currently logged user <ul><li><em>$topic_id</em> 	[integer] 	topic id you want to check</li></ul>
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>true or false</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionsendEmailToUser" id="functionsendEmailToUser"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">sendEmailToUser</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 794]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer sendEmailToUser(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function allows to send a mail to a member of the board (if allowed)<br />
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$user_id</strong> 	<em>[integer]</em> 	the ID of target user<br /></li><li><strong>$subject</strong> 	<em>[string]</em> 	subject of mail<br /></li><li><strong>$message</strong> 	<em>[string]</em> 	the content of mail (both in txt and html format)<br /></li><li><strong>$cc_email</strong> 	<em>[string]</em>		cc destinations separated by comma<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>can be:             <strong>GENERAL_ERR_MUSTLOGGED</strong>             you must to be logged in order to use this function<br />             <strong>'SENDMAIL_ERR_MAILDISABLED'</strong>         mail is disabled in board configuration<br />             <strong>'SENDMAIL_ERR_MAILNOTALLOWED'</strong>     mail not allowed <br />             <strong>'SENDMAIL_ERR_FLOODLIMIT'</strong>         you're a spammer?<br />             <strong>'SENDMAIL_OK'</strong>                     sent successfully<br />             <strong>'SENDMAIL_ERR'</strong>                     sent error</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionsendPrivateMessage" id="functionsendPrivateMessage"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">sendPrivateMessage</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 149]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer sendPrivateMessage(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Allows to send a private message using the currently logged user informations<br /><br />
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong><br /> <ul><li><strong>$mode</strong> 				[string]	<em>'reply'</em> (if you want to reply to an existing message, see $replyToMsgID param) or <em>'post'</em> to post a new message<br /></li><li><strong>$destinationUserID</strong> 	[integer]	destination user id<br /></li><li><strong>$subject</strong> 			[string]	subject of the message<br /></li><li><strong>$message_text</strong> 		[string]	text of the messager<br /></li><li><strong>$replyToMsgID</strong> 		[string]	if you have specified $mode as 'reply' you need to specify the origin message id you want to quote<br /></li><li><strong>$enableSign</strong> 			[boolean]	enable your signature?<br /></li><li><strong>$enableBBCode</strong> 		[boolean]	enable BBCode into the message text?<br /></li><li><strong>$enableSmiles</strong> 		[boolean]	enable graphical smiles?<br /></li><li><strong>$enableURLs</strong> 			[boolean]	enable URLs?<br /></li><li><strong>$putInOutbox</strong> 		[boolean]	put your sent message in 'outbox' folder automatically?<br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>GENERAL_ERR_MUSTLOGGED or null if sent successfully.</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionsetPrivateMessageAsRead" id="functionsetPrivateMessageAsRead"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">setPrivateMessageAsRead</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 53]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer setPrivateMessageAsRead(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Mark a private message as read<br /><br />
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong><br /> <ul><li>[integer] 	<strong>$msg_id</strong> 		[integer]	target message id</li><li>[integer] 	<strong>$folder_id</strong> 	[integer]	parent folder id (where the message is located)</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>the number of unread private messages</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiontoogleBookmarkSetting" id="functiontoogleBookmarkSetting"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">toogleBookmarkSetting</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 455]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>null toogleBookmarkSetting(
+ $topic_id&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Allows to toggle bookmark status (true/false) of a topic <ul><li><em>$topic_id</em> 	[integer] 	topic id you want to check</li></ul>
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$topic_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>no return</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_applyCensorsAndBBCode" id="function_applyCensorsAndBBCode"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">_applyCensorsAndBBCode</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 116]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _applyCensorsAndBBCode(
+ $message,  $bbcodebitfield,  $passSmiles,  $isSubject,  $bbcodeUID&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$message:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$bbcodebitfield:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$passSmiles:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$isSubject:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$bbcodeUID:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_getUserFolderWithID" id="function_getUserFolderWithID"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">_getUserFolderWithID</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 574]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _getUserFolderWithID(
+ $folderId,  $userId&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$folderId:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$userId:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+		</div>
+	</div><br />
+
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 30 Jul 2008 11:02:34 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.1</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

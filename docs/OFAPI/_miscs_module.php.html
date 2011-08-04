@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Docs for page miscs_module.php</title>
+	<link rel="stylesheet" type="text/css" href="../media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="../media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">OFAPI<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                                      
+                      		[ <a href="../classtrees_OFAPI.html" class="menu">class tree: OFAPI</a> ]
+		[ <a href="../elementindex_OFAPI.html" class="menu">index: OFAPI</a> ]
+            [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">OFAPI</div>
+  <div class="package">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="../li_default.html">default</a><br />
+              <a href="../li_OFAPI.html">OFAPI</a><br />
+      	</div>
+      <br />
+                        <b>Files:</b><br />
+        <div class="package">
+				<span style="padding-left: 1em;"><a href="../OFAPI/_costants.php.html">costants.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_headers.php.html">headers.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_logging_module.php.html">logging_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_members_module.php.html">members_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_miscs_module.php.html">miscs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msgs_module.php.html">msgs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msg_sending.php.html">msg_sending.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ofapi.php.html">ofapi.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_shared.php.html">shared.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_stats_module.php.html">stats_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ucp_register.php.html">ucp_register.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_user_module.php.html">user_module.php</a></span><br />
+	  </div>
+            <br />
+                      </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Procedural File: miscs_module.php</h1>
+Source Location: /miscs_module.php<br /><br />
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Page Details</div>
+	<div class="nav-bar">
+					<span class="disabled">Page Details</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">
+				<table border="0" cellspacing="0" cellpadding="0">
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>v 1.0 2008/06/28</td></tr>
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.1 (2008/07/29) Added getBoardName(), getBoardConfigurationData()</td></tr>
+			<tr><td><strong>Copyright:</strong>&nbsp;&nbsp;</td><td>(c) 2008 Roberto Beretta &amp; Daniele Margutti</td></tr>
+			<tr><td><strong>Link:</strong>&nbsp;&nbsp;</td><td><a href="http://code.google.com/p/ofapi">http://code.google.com/p/ofapi</a></td></tr>
+			<tr><td><strong>License:</strong>&nbsp;&nbsp;</td><td><a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></td></tr>
+	</table>
+
+			</div>
+</div>
+
+
+
+
+
+	<a name="sec-functions"></a>
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Page Details</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">
+			<a name="functiongetBoardConfigurationData" id="functiongetBoardConfigurationData"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getBoardConfigurationData</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 104]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getBoardConfigurationData(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return some board informations <br />
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return an array with these keys:<br />              <strong>'board_contact'</strong>            board email contact <br />              <strong>'sitename'</strong>                the name of the board <br />              <strong>'site_desc'</strong>                description of the board <br />              <strong>'phpbb_version'</strong>            currently installed phpbb version <br />              <strong>'num_files'</strong>                number of uploaded files into the board <br />              <strong>'num_posts'</strong>                number of posts of the board <br />              <strong>'num_topics'</strong>                number of topics posted into the board <br />              <strong>'num_users'</strong>                number of subscrbed users <br />              <strong>'record_online_date'</strong>        the date where the board was most visited (in unix format) <br />              <strong>'record_online_users'</strong>    the max online users <br />              <strong>'load_online_time'</strong>        stats about online users is refererred by the last previous x minutes <br />              <strong>'online_guests'</strong>            number of currently online guests <br />              <strong>'online'</strong>                    number of currently online users <br /></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION DON'T REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetBoardName" id="functiongetBoardName"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getBoardName</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 79]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getBoardName(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return board's name<br />
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>The board name</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION DON'T REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetFAQGuide" id="functiongetFAQGuide"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getFAQGuide</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 41]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getFAQGuide(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function return a brief guide to forum based upon the content of FAQ sections<br />  You can use this function only if you are logged and it returns FAQ in your choosed language
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$type</strong> 	<em>[string]</em> 	<strong>'bbcode'</strong> to get BBCodes guide or <strong>'faq'</strong> to get the faq complete guide</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>the returned array contains a list of blocks (categories) with a specified argument. Each object contains:<br /><br /> <ul><li><strong>'title'</strong>         <em>[string]</em>     The title of the section, the argument of the help<br /></li><li><strong>'list'</strong>         <em>[array]</em>         Author of message
+            <br /></li></ul>            'list' is an array with these keys: <br />             <strong>'question'</strong>         <em>[string]</em>     The question<br />             <strong>'answer'</strong>         <em>[string]</em>     The answer (woah!)<br /></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+		</div>
+	</div><br />
+
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 30 Jul 2008 11:02:32 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.1</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

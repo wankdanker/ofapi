@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Docs for page members_module.php</title>
+	<link rel="stylesheet" type="text/css" href="../media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="../media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">OFAPI<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                                      
+                      		[ <a href="../classtrees_OFAPI.html" class="menu">class tree: OFAPI</a> ]
+		[ <a href="../elementindex_OFAPI.html" class="menu">index: OFAPI</a> ]
+            [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">OFAPI</div>
+  <div class="package">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="../li_default.html">default</a><br />
+              <a href="../li_OFAPI.html">OFAPI</a><br />
+      	</div>
+      <br />
+                        <b>Files:</b><br />
+        <div class="package">
+				<span style="padding-left: 1em;"><a href="../OFAPI/_costants.php.html">costants.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_headers.php.html">headers.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_logging_module.php.html">logging_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_members_module.php.html">members_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_miscs_module.php.html">miscs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msgs_module.php.html">msgs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msg_sending.php.html">msg_sending.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ofapi.php.html">ofapi.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_shared.php.html">shared.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_stats_module.php.html">stats_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ucp_register.php.html">ucp_register.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_user_module.php.html">user_module.php</a></span><br />
+	  </div>
+            <br />
+                      </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Procedural File: members_module.php</h1>
+Source Location: /members_module.php<br /><br />
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Page Details</div>
+	<div class="nav-bar">
+					<span class="disabled">Page Details</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">
+				<table border="0" cellspacing="0" cellpadding="0">
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0 first draft 2008/06/28</td></tr>
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.1 (2008/07/29) Added searchForMember()</td></tr>
+			<tr><td><strong>Copyright:</strong>&nbsp;&nbsp;</td><td>(c) 2008 Roberto Beretta (roberto.alpha@gmail.com) &amp; Daniele Margutti (malcom.mac@gmail.com)</td></tr>
+			<tr><td><strong>Link:</strong>&nbsp;&nbsp;</td><td><a href="http://code.google.com/p/ofapi">http://code.google.com/p/ofapi</a></td></tr>
+			<tr><td><strong>License:</strong>&nbsp;&nbsp;</td><td><a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></td></tr>
+	</table>
+
+			</div>
+</div>
+
+
+
+
+
+	<a name="sec-functions"></a>
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Page Details</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">
+			<a name="functiongetMembersList" id="functiongetMembersList"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getMembersList</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 57]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getMembersList(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function simply return the list of subscribed members of the board
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$pageIdx</strong> 		<em>[integer]</em> 	The number of page (of results) you want to show (0 is default)<br /></li><li><strong>$itemsPerPage</strong>	<em>[integer]</em> 	Number of members to show in a single page (30 is default)<br /></li><li><strong>$first_char</strong> 		<em>[string]</em>		Specify an alphanumeric char to view only items with this prefix (or leave it '')</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>see getMembersListWithAdvancedSearch for results info</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.1 - Added $first_char parameter to specify an alphanumeric letter that filter results (ex. to make a list for 'A','B','C'... pages)</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetMembersListWithAdvancedSearch" id="functiongetMembersListWithAdvancedSearch"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getMembersListWithAdvancedSearch</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 108]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getMembersListWithAdvancedSearch(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function simply return the list of subscribed members of the board
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$mode</strong> 			<em>[string]</em> 	<strong>''</strong> standard members list (default), <strong>'searchuser'</strong> for search member feature<br /></li><li><strong>$pageIdx</strong> 		<em>[integer]</em> 	Number of page you want to show<br /></li><li><strong>$itemsPerPage</strong>	<em>[integer]</em> 	Number of members to show in a single page (30 is default)<br /></li><li><strong>$first_char</strong> 		<em>[string]</em>		Specify an alphanumeric char to view only items with this prefix (or leave it '')</li><li><strong>$sort_key</strong> 		<em>[string]</em> 	Sorting options by: <strong>'a'</strong>= username, <strong>'b'</strong>= user from, <strong>'c'</strong>= user registration date, <strong>'d'</strong>= users posts,
+												 <strong>'f'</strong>= website, <strong>'g'</strong>= user ICQ contact, <strong>'h'</strong>= user AIM contact,  <strong>'i'</strong>= user MSN contact, <strong>'j'</strong>= user YIM
+												 contact, <strong>'k'</strong>=  user JABBER contact<br /></li><li><strong>$sort_direction</strong> 	<em>[string]</em> 	<strong>'a'</strong> ascending or <strong>'d'</strong> descending</li><li><strong>$fieldsToSearch</strong> 	<em>[array]</em>		You need to insert key/value items to perform deep search inside user properties.<br />Use * to perform a partial search<br /></li></ul>		$fieldsToSearch available keys are:<br />  		  <strong>'username'</strong> 	   	search inside username (for given key value as string)<br />  		  <strong>'mail'</strong>             search inside mail<br />     	  <strong>'icq'</strong>              search inside icq (for given key value as string)<br />    	  <strong>'aim'</strong>              search inside aim (for given key value as string)<br />   		  <strong>'yahoo'</strong>            search inside yahoo (for given key value as string)<br /> 		  <strong>'msn'</strong>              search inside msn (for given key value as string)<br /> 		  <strong>'jabber'</strong>           search inside jabber (for given key value as string)<br /> 		  <strong>'search_group_id'</strong>  search inside group id (as integer)<br /> 		  <strong>'joined_select'</strong>    could be <strong>'lt'</strong> (lower than), <strong>'eq'</strong> (equal to) or <strong>'gt'</strong> (grather than). You need to fill 'joined' (see below)<br /> 		  <strong>'joined'</strong>           _put here your data in format &quot;MM-DD-YYYY&quot;<br /> 		  <strong>'active_select'</strong>    see <em>'joined_selected'</em>. Accomplish it with 'active' (see below)<br /> 		  <strong>'active'</strong>           _put here your data in format &quot;MM-DD-YYYY&quot;<br /> 		  <strong>'count_select'</strong>     see <em>'joined_select'</em>. Accomplish it with 'count'<br /> 		  <strong>'count'</strong>            put the number of messages to check as integer (default is 0)<br /> 		  <strong>'ip'</strong>               ip domain to search<br /> <ul><li><strong>$validateAll</strong> 			if you specify it as true all proprerties to search must be validated to get result (AND) (default is false = OR)</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>an array of members with these keys:<br /><br /> <ul><li><strong>'total_users'</strong> number of total users on board<br /></li><li><strong>'users_list'</strong> users array<br /><br />
+                        'users_list' array contains dictionaries with these keys:<br />
+                                  <strong>'username'</strong>             name of the user<br />
+                               <strong>'user_id'</strong>             id of the user<br />
+                               <strong>'user_lastvisit'</strong>     user's last visit<br />
+                               <strong>'user_avatar'</strong>         user avatar link<br /><br /></li><li><strong>'current_page'</strong> current showed page<br /></li><li><strong>'total_pages'</strong> number of total pages<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionsearchForMember" id="functionsearchForMember"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">searchForMember</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 34]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array searchForMember(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This function allows you to search for a member of the board.
+</strong></p>
+<span class="description"><p>You can also specify lots of options.<br />  <br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$fieldsToSearch</strong> 	<em>[array]</em> 		This array specify some custom criteria. See $fieldsToSearch in getMembersListWithAdvancedSearch function to know how to use it.<br /></li><li><strong>$pageIdx</strong> 		<em>[integer]</em> 	The number of page (of results) you want to show (0 is default)<br /></li><li><strong>$itemsPerPage</strong> 	<em>[integer]</em> 	Number of members to show in a single page (30 is default)<br /></li><li><strong>$first_char</strong> 		<em>[string]</em>		Specify an alphanumeric char to view only items with this prefix (or leave it '')</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>see _getMembersListWithAdvancedSearch for results info</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.1 - Added $first_char parameter to specify an alphanumeric letter that filter results (ex. to make a list for 'A','B','C'... pages)</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_getMembersListWithAdvancedSearch" id="function_getMembersListWithAdvancedSearch"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">_getMembersListWithAdvancedSearch</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 126]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _getMembersListWithAdvancedSearch(
+[ $mode = &#039;&#039;], [ $pageIdx = 0], [ $usersPerPage = 30], [ $first_char = &#039;&#039;], [ $sort_key = &#039;a&#039;], [ $sort_direction = &#039;a&#039;], [ $fieldsToSearch = array()], [ $validateAll = false]&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong><strong>** INTERNAL METHOD: DO NOT USE IT **</strong>
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$mode:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$pageIdx:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$usersPerPage:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$first_char:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$sort_key:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$sort_direction:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$fieldsToSearch:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$validateAll:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+		</div>
+	</div><br />
+
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 30 Jul 2008 11:02:32 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.1</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

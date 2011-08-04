@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Docs for page stats_module.php</title>
+	<link rel="stylesheet" type="text/css" href="../media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="../media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">OFAPI<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                                      
+                      		[ <a href="../classtrees_OFAPI.html" class="menu">class tree: OFAPI</a> ]
+		[ <a href="../elementindex_OFAPI.html" class="menu">index: OFAPI</a> ]
+            [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">OFAPI</div>
+  <div class="package">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="../li_default.html">default</a><br />
+              <a href="../li_OFAPI.html">OFAPI</a><br />
+      	</div>
+      <br />
+                        <b>Files:</b><br />
+        <div class="package">
+				<span style="padding-left: 1em;"><a href="../OFAPI/_costants.php.html">costants.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_headers.php.html">headers.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_logging_module.php.html">logging_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_members_module.php.html">members_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_miscs_module.php.html">miscs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msgs_module.php.html">msgs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msg_sending.php.html">msg_sending.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ofapi.php.html">ofapi.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_shared.php.html">shared.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_stats_module.php.html">stats_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ucp_register.php.html">ucp_register.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_user_module.php.html">user_module.php</a></span><br />
+	  </div>
+            <br />
+                      </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Procedural File: stats_module.php</h1>
+Source Location: /stats_module.php<br /><br />
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Page Details</div>
+	<div class="nav-bar">
+					<span class="disabled">Page Details</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">
+				<table border="0" cellspacing="0" cellpadding="0">
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>v 1.0 2008/06/28</td></tr>
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.1 (2008/07/29) Added: <em>getBoardAdmins(),getModsList(),getModsFromForumID()</em></td></tr>
+			<tr><td><strong>Copyright:</strong>&nbsp;&nbsp;</td><td>(c) 2008 Roberto Beretta &amp; Daniele Margutti</td></tr>
+			<tr><td><strong>Link:</strong>&nbsp;&nbsp;</td><td><a href="http://code.google.com/p/ofapi">http://code.google.com/p/ofapi</a></td></tr>
+			<tr><td><strong>License:</strong>&nbsp;&nbsp;</td><td><a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></td></tr>
+	</table>
+
+			</div>
+</div>
+
+
+
+
+
+	<a name="sec-functions"></a>
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Page Details</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">
+			<a name="functiongetBoardAdmins" id="functiongetBoardAdmins"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getBoardAdmins</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 523]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getBoardAdmins(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the list of board leaders
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>return two array (admins &amp; mods) with object that contains these keys: <ul><li><strong>'username'</strong>     <em>[string]</em>     full username <br /></li><li><strong>'user_id'</strong>         <em>[integer]</em>     user id <br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (ONLY REGISTERED USERS) (return GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetGeneralForumStatistics" id="functiongetGeneralForumStatistics"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getGeneralForumStatistics</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 191]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getGeneralForumStatistics(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return board statistics informations.
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong> NOT REQUIRED</p></span>
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return an array with these keys: <br /><br /> <ul><li><strong>'announcment_total'</strong>     <em>[integer]</em>     number of announcements published on board <br /></li><li><strong>'sticky_total'</strong>         <em>[string]</em>     number of stickies published on board<br /></li><li><strong>'attachments_total'</strong>     <em>[integer]</em>     number of attachments published on board <br /></li><li><strong>'total_posts'</strong>             <em>[integer]</em>     number of posts <br /></li><li><strong>'total_topics'</strong>         <em>[integer]</em>     number of topics <br /></li><li><strong>'total_users'</strong>             <em>[integer]</em>     number of registered users on board <br /></li><li><strong>'board_days'</strong>             <em>[integer]</em>     days elapsed since board born date <br /></li><li><strong>'topics_per_day'</strong>         <em>[integer]</em>    average number of topics published each day <br /></li><li><strong>'posts_per_day'</strong>         <em>[integer]</em>     average number of posts published each day <br /></li><li><strong>'users_per_day'</strong>         <em>[integer]</em>     average number of registrations each day <br /></li><li><strong>'topics_per_users'</strong>     <em>[integer]</em>     average new topics published per users <br /></li><li><strong>'posts_per_user'</strong>         <em>[integer]</em>     average number of posts per user <br /></li><li><strong>'posts_per_topic'</strong>         <em>[integer]</em>     average number of posts per topic <br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION DOES NOT REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetLastBots" id="functiongetLastBots"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getLastBots</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 647]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getLastBots(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the last search engines bots who visited the board  <strong>PARAMETERS:</strong> 	<strong>$maxNumbersToShow</strong> 	[integer]	max number of bots to show
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>return an array of search bots, each object with these keys:<br /> <ul><li><strong>'bot_name'</strong>         <em>[string]</em>         bot display name <br /></li><li><strong>'last_visit'</strong>         <em>[long integer]</em>     last visit (in unix time format)<br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION DOES NOT REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetLastSubscribedMembers" id="functiongetLastSubscribedMembers"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getLastSubscribedMembers</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 272]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getLastSubscribedMembers(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return last subscribed members of the board. You must be logged in order to use this function.<br />
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong> <br />  	<em>$limitNumberTo:</em> 	[integer]	limit results to this number</p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return an array with these keys: <br /><br /> <ul><li><strong>'username'</strong>     <em>[string]</em>         subcribed member username <br /></li><li><strong>'user_id'</strong>         <em>[integer]</em>         id of member<br /></li><li><strong>'joined_on'</strong>     <em>[long integer]</em>     member join date (in unix format) <br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetModsFromForumID" id="functiongetModsFromForumID"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getModsFromForumID</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 555]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getModsFromForumID(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the list of moderators of a given forum id
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>see getBoardAdmins()</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (ONLY REGISTERED USERS) (return GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetModsList" id="functiongetModsList"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getModsList</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 539]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getModsList(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the list of moderators
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>see getBoardAdmins()</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (ONLY REGISTERED USERS) (return GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetNumberOfOnlineGuests" id="functiongetNumberOfOnlineGuests"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getNumberOfOnlineGuests</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 31]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer getNumberOfOnlineGuests(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return number of online guests based upon data from last 5 minutes
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong> NOT REQUIRED</p></span>
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>number of online guests</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION DOES NOT REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetOnlineUsers" id="functiongetOnlineUsers"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getOnlineUsers</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 64]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getOnlineUsers(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return several informations about connected users (based upon data from last 5 minutes).
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong> NOT REQUIRED</p></span>
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return an array with these keys: <br /><br /> <ul><li><strong>'connected_users'</strong>         <em>[array]</em>        this array contains logged users. Each item is an array with these keys: <br /><br />
+                        'connected_users' objects are dictionaries with these keys:<br />
+                                <strong>'user_link'</strong>     link to user's profile page <br />
+                                <strong>'user_id'</strong>     user's id <br />
+                                <strong>'user_name'</strong>     clear string with the username <br />
+                                <strong>'user_type'</strong>     define type of user (0=USER_NORMAL,1=USER_INACTIVE,3=USER_FOUNDER)<br /></li></ul> <ul><li><strong>'logged_visibles'</strong>         <em>[integer]</em>     number of logged an visible users <br /></li><li><strong>'logged_invisible'</strong>     <em>[integer]</em>     number of logged but invisible users <br /></li><li><strong>'guests_online'</strong>         <em>[integer]</em>     return the number of online guests connected to the board</li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetRandomMemberInfo" id="functiongetRandomMemberInfo"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getRandomMemberInfo</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 314]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getRandomMemberInfo(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return a random member of the board with it's info (include email according to user preferences or only if you are logged as admin).
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong> NOT REQUIRED</p></span>
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return an array with these keys: <br /><br /> <ul><li><strong>'username'</strong>                 <em>[string]</em>             subcribed member username <br /></li><li><strong>'user_id'</strong>                     <em>[integer]</em>             id of member<br /></li><li><strong>'user_regdate'</strong>             <em>[long integer]</em>         member join date (in unix format) <br /></li><li><strong>'user_lastvisit'</strong>             <em>[long integer]</em>         member last visit date (in unix format) <br /></li><li><strong>'user_lastpost_time'</strong>         <em>[long integer]</em>         date of last post from user (in unix format) <br /></li><li><strong>'user_inactive_time'</strong>         <em>[long integer]</em>         user inactivity time (in unix format) <br /></li><li><strong>'user_avatar'</strong>                 <em>[string]</em>             html link to avatar picture <br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (ONLY REGISTERED USERS) (return GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetTodaysBirthdays" id="functiongetTodaysBirthdays"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getTodaysBirthdays</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 427]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getTodaysBirthdays(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return users birthdays today and if $includeBirthsNextDays &gt; 0 into the next $includeBirthsNextDays days
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong> <em>$includeBirthsNextDays</em> if &gt; 0 includes birthdays into the next specified days</p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>return users birthdays today and if $includeBirthsNextDays &gt; 0 into the next $includeBirthsNextDays days                 <br /> The result is an array with two keys: <br /> <ul><li><strong>'todays_birthdays'</strong> <em>[array]</em>        an array with today's birthdays <br /></li><li><strong>'head_birthdays'</strong>     <em>[array]</em>        an array with birthdays into the next given days <br /><br /></li></ul>                 Each object of these array is a dictionary array with these keys: <br /> <ul><li><strong>'username'</strong>         <em>[string]</em>     full username <br /></li><li><strong>'user_id'</strong>             <em>[integer]</em>     user id <br /></li><li><strong>'age'</strong>                 <em>[integer]</em>     future age <br /></li><li><strong>'born_year'</strong>         <em>[integer]</em>     born year date <br /></li><li><strong>'user_birthday'</strong>     <em>[string]</em>     born full date in unix epoch time format (DD-M-YYYY) <br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (ONLY REGISTERED USERS) (return GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetTopPosters" id="functiongetTopPosters"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getTopPosters</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 140]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getTopPosters(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return a list with the board's top posters<br /><br />
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong><br /> <ul><li>[integer] 	<strong>$limitNumberTo</strong> 		[integer]	max items to show</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>See <em>getOnlineUsers()</em> for results type.</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetWordsgraphList" id="functiongetWordsgraphList"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getWordsgraphList</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 363]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getWordsgraphList(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return a list with the most used words into the board with descending sort
+</strong></p>
+<span class="description"><p><strong>PARAMETERS:</strong> <em>$maxWordsToList</em> number of words to show</p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return an array of strings</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION REQUIRE LOGIN (ONLY REGISTERED USERS) (return GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Todo:</strong>&nbsp;&nbsp;</td><td>THIS METHOD DOES NOT WORK WELL AND IT'S TOO SLOW. WE SHOULD REMOVE IT.</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_getAdminAndModsInfos" id="function_getAdminAndModsInfos"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">_getAdminAndModsInfos</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 587]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _getAdminAndModsInfos(
+ $whatReturn&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$whatReturn:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_getAdminsGroupID" id="function_getAdminsGroupID"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">_getAdminsGroupID</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 499]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _getAdminsGroupID(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_parseUsersIdsAndGetUsernames" id="function_parseUsersIdsAndGetUsernames"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">_parseUsersIdsAndGetUsernames</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 569]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _parseUsersIdsAndGetUsernames(
+ $list&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$list:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+		</div>
+	</div><br />
+
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 30 Jul 2008 11:02:33 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.1</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Docs for page msgs_module.php</title>
+	<link rel="stylesheet" type="text/css" href="../media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="../media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">OFAPI<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                                      
+                      		[ <a href="../classtrees_OFAPI.html" class="menu">class tree: OFAPI</a> ]
+		[ <a href="../elementindex_OFAPI.html" class="menu">index: OFAPI</a> ]
+            [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">OFAPI</div>
+  <div class="package">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="../li_default.html">default</a><br />
+              <a href="../li_OFAPI.html">OFAPI</a><br />
+      	</div>
+      <br />
+                        <b>Files:</b><br />
+        <div class="package">
+				<span style="padding-left: 1em;"><a href="../OFAPI/_costants.php.html">costants.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_headers.php.html">headers.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_logging_module.php.html">logging_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_members_module.php.html">members_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_miscs_module.php.html">miscs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msgs_module.php.html">msgs_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_msg_sending.php.html">msg_sending.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ofapi.php.html">ofapi.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_shared.php.html">shared.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_stats_module.php.html">stats_module.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_ucp_register.php.html">ucp_register.php</a></span><br />
+			<span style="padding-left: 1em;"><a href="../OFAPI/_user_module.php.html">user_module.php</a></span><br />
+	  </div>
+            <br />
+                      </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Procedural File: msgs_module.php</h1>
+Source Location: /msgs_module.php<br /><br />
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Page Details</div>
+	<div class="nav-bar">
+					<span class="disabled">Page Details</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">
+				<table border="0" cellspacing="0" cellpadding="0">
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>v 1.0 2008/06/28</td></tr>
+			<tr><td><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.1 (2008/07/29).<br />Added Methods: <ul><li>getTopicWithID()</li><li>getPageIndexForPostWithID()<br /></li><li>_getFirstNewPostIDInTopicAfterADate()<br /></li><li>_getNumberOfPostsOfTopic()<br /></li><li>_getNumberOfPostsAfterADateFromTopic()<br /></li><li>getPageToLookForPostsAfterDate()</li><li>getPostWithID()<br /></li><li>getPostsWithID()<br /></li><li>countTopicsInForum()<br /></li><li>searchInsideBoard()</li></ul></td></tr>
+			<tr><td><strong>Copyright:</strong>&nbsp;&nbsp;</td><td>(c) 2008 Roberto Beretta (roberto.alpha@gmail.com) &amp; Daniele Margutti (malcom.mac@gmail.com)</td></tr>
+			<tr><td><strong>Link:</strong>&nbsp;&nbsp;</td><td><a href="http://code.google.com/p/ofapi">http://code.google.com/p/ofapi</a></td></tr>
+			<tr><td><strong>License:</strong>&nbsp;&nbsp;</td><td><a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></td></tr>
+	</table>
+
+			</div>
+</div>
+
+
+
+
+
+	<a name="sec-functions"></a>
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Page Details</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">
+			<a name="functioncountPostsInTopic" id="functioncountPostsInTopic"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">countPostsInTopic</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 1055]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer countPostsInTopic(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the number of posts in a specified topic <ul><li><strong>$topic_id</strong>		[integer]	target topic unique id</li></ul>
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>the number of posts</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functioncountTopicsInForum" id="functioncountTopicsInForum"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">countTopicsInForum</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 332]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer countTopicsInForum(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return the number of topics inside a forum
+</strong></p>
+
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return the number of topics of a forum.<br /></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>IT DOES NOT REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetActiveTopics" id="functiongetActiveTopics"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getActiveTopics</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 572]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getActiveTopics(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This method returns the most recents active topics on board<br />
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$sort_days</strong> <em>[integer]</em> return articles since last specified days (null mean 1 (one) day)</li><li><strong>$pageIdx</strong> <em>[integer]</em> the page you want to show</li><li><strong>$itemsPerPage</strong> <em>[integer]</em> items per page</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>If valid it returns a dictionary with two keys: <ul><li><strong>'page_showed'</strong> the page you have showed</li><li><strong>'total_pages'</strong> the number of pages</li><li><strong>'total_items'</strong> the number of items in all pages</li><li><strong>'items'</strong> an array of topics <br /></li></ul>     'items' objects are dictionaries with these keys:<br />             <strong>'forum_id'</strong>                    <em>[integer]</em>         parent forum id of topic<br />             <strong>'topic_title'</strong>                <em>[string]</em>         title of the topic<br />             <strong>'topic_id'</strong>                    <em>[string]</em>         id of the topic<br />             <strong>'topic_poster'</strong>                <em>[integer]</em>         author id of topic<br />             <strong>'topic_time'</strong>                    <em>[long integer]</em>     posting date of the first message (unix time)<br />             <strong>'topic_views'</strong>                <em>[integer]</em>         views of the topic<br />             <strong>'topic_replies_real'</strong>            <em>[integer]</em>         number of replies into the topic<br />             <strong>'topic_first_post_id'</strong>        <em>[integer]</em>         the post id of the first post<br />             <strong>'topic_first_poster_name'</strong>    <em>[string]</em>         author of the topic (first post author)<br />             <strong>'topic_last_post_id'</strong>            <em>[integer]</em>        the id of the last post into the topic<br />             <strong>'topic_last_poster_id'</strong>        <em>[integer]</em>         the author id of the last reply message of the topic<br />             <strong>'topic_last_poster_name'</strong>        <em>[string]</em>         the author name of the last reply message of the topic<br />             <strong>'topic_last_post_time'</strong>        <em>[long integer]</em>     the last post date in unix time<br />             <strong>'topic_poster'</strong>                <em>[integer]</em>         the id of the author of the topic<br /></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE LOGIN (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetForumsTree" id="functiongetForumsTree"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getForumsTree</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 373]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getForumsTree(
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return user's visible forums tree with some additional informations.
+</strong></p>
+
+    
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>This function return an array of arrays (an hierarchical list) that represent the forum tree structure.<br />            Some fields are 0 or empty if forum is a category (FORUM_CAT) or link (FORUM_LINK)<br />            Each object contains these keys: <ul></ul><ul><li><strong>'forum_name'</strong>                 [string]             the name of the forum<br /></li><li><strong>'forum_type'</strong>                 [integer]             <em>FORUM_CAT</em>(0) = category, <em>FORUM_POST</em>(1) = normal forum, <em>FORUM_LINK</em>(2) = link<br /></li><li><strong>'forum_image'</strong>                 [string]             local path to forum image<br /></li><li><strong>'forum_posts'</strong>                 [integer]             the number of posts contained into the forum<br /></li><li><strong>'forum_topics'</strong>                 [integer]             the number of topics into the forum<br /></li><li><strong>'forum_last_post_time'</strong>         [long integer]         last post time (last update to the forum in unix format)<br /></li><li><strong>'forum_last_poster_name'</strong>     [string]             the author of the last post published into the forum<br /></li><li><strong>'forum_last_post_id'</strong>         [integer]             the id of the last post published into the forum<br /></li><li><strong>'forum_last_post_subject'</strong>     [string]             the subject of the last post published into this forum<br /></li><li><strong>'count_topics'</strong>                 [integer]             the number of posts inside the topic</li><li><strong>'childs'</strong>                     [array]             an array with the same type of objects just described</li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>FUNCTION CAN RETURN DIFFERENT INFORMATIONS BASED UPON YOUR LOGIN PERMISSIONS</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetNewPostedMessagesFilteredBy" id="functiongetNewPostedMessagesFilteredBy"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getNewPostedMessagesFilteredBy</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 815]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer getNewPostedMessagesFilteredBy(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Get new posts/topics since a gived period. This method return paginated results, so you can display huge data in separated blocks.
+</strong></p>
+<span class="description"><p>You need to login before using this method if you want to get items since your last login.  You need to provide 4 parameters inside the $args array.  To create a new account you need to browse the board using a browser. <ul><li><strong>$show_results</strong> 	[string] 	<em>'posts'</em> to return flat list of posts or <em>'topics'</em> to return topics list</li><li><strong>$itemsPerPage</strong> 	[integer] 	number of posts per page</li><li><strong>$pageIdx</strong> 		[integer] 	number of page to show</li><li><strong>$range</strong> 			[multiple values] can be: <br />
+                         						  	<em>'uLastVisitDate'</em> 			[string] 		show new messages since last (currently logged) user visit date <br />
+                           						<em>'last7Days'</em> 					[string] 		show new messages posted between 7 days ago to today <br />
+                           						<em>array($_dateStart,$_dateEnd)</em> [array 2itms] 	show new messages in given range (start,end)</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td><strong>ERRORS:</strong><br />                    --------------<br />                    <strong>NEWPOSTED_MSG_REQUIRELOGIN</strong> the method with this configuration require login first<br />                    <strong>NEWPOSTED_MSG_DATERANGEINVALID</strong> given range is invalid<br />                    <br />                    <strong>VALID RESULTS:</strong><br />                    --------------<br />                    see results for function <em>getUnansweredPosts()</em></td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetPageIndexForPostWithID" id="functiongetPageIndexForPostWithID"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getPageIndexForPostWithID</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 64]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getPageIndexForPostWithID(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This method return the number of page where a specific post id is contained.<br />
+</strong></p>
+<span class="description"><p>In order to get the correct number you need to specify the number of posts per page (you can obtain it via <em>getBoardConfigurationData()</em> method in miscs_module.php)  <br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$post_id</strong> 		<em>[integer]</em> 	Target post id</li><li><strong>$topic_id</strong> 		<em>[integer]</em> 	Topic id of target post</li><li><strong>$forum_id</strong> 		<em>[integer]</em> 	Forum id of target post</li><li><strong>$postsPerPage</strong> 	<em>[string]</em> 	Number of posts per page</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>the page index you need to load to get this post id</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION DON'T REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetPageToLookForPostsAfterDate" id="functiongetPageToLookForPostsAfterDate"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getPageToLookForPostsAfterDate</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 184]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer getPageToLookForPostsAfterDate(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This method return the page you need to load to get the first new post created after a reference date (generally the last user logging date)
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$topic_id</strong> 		<em>[integer]</em> 	Our topic id</li><li><strong>$date</strong> 			<em>[integer]</em> 	The reference date in unix format (time interval since 1970)</li><li><strong>$itemsPerPage</strong> 	<em>[integer]</em> 	The number of posts per page (you can obtain it via <em>getBoardConfigurationData()</em> method in miscs_module.php)</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>page index to load</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION DON'T REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetPostsWithIDs" id="functiongetPostsWithIDs"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getPostsWithIDs</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 234]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getPostsWithIDs(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This method return a specific post id.
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$post_id</strong> 		<em>[integer]</em> 	The post id you want to load</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>an array with loaded post. See <em>getPostWithID</em> to get the elements printed in each object dictionary</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION DON'T REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetPostWithID" id="functiongetPostWithID"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getPostWithID</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 220]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>dictionary getPostWithID(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This method return a specific post id.
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$post_id</strong> 		<em>[integer]</em> 	The post id you want to load</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>a dictionary with these keys: <ul><li><strong>'post_time'</strong>    <em>[integer]</em>    the creation date in unix format <br /></li><li><strong>'post_text'</strong>    <em>[string]</em>        the post's text <br /></li><li><strong>'poster_id'</strong>    <em>[integer]</em>    the author id of the post <br /></li><li><strong>'forum_id'</strong>        <em>[integer]</em>    the forum id of the post <br /></li><li><strong>'topic_id'</strong>        <em>[integer]</em>    the parent topic id of the post <br /></li></ul></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION DON'T REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetRecentsAnnouncements" id="functiongetRecentsAnnouncements"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getRecentsAnnouncements</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 1022]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getRecentsAnnouncements(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return recents announcements. You can provide a maxTopicsToList as integer (the max number of items to show) or<br />
+</strong></p>
+<span class="description"><p><ul><li><strong>$excludeForumIdsList</strong>		[array] 	to exclude some forums (as array of forum's IDs) to exclude from fetch</li><li><strong>$maxToList</strong> 				[integer]	max announcements to list</li><li><strong>$excludeForumIdsList</strong> 	[array] 	lists of forum-ids to exclude</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>see items dictionary keys of <em>getRecentsHotTopics()</em> method.</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetRecentsHotTopics" id="functiongetRecentsHotTopics"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getRecentsHotTopics</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 953]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getRecentsHotTopics(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Return most visited recents topics.<br />
+</strong></p>
+<span class="description"><p>You can provide a maxTopicsToList as integer (the max number of items to show) or<br />  $excludeForumIdsList to exclude some forums (as array of forum's IDs) to exclude from fetch <ul><li><strong>$maxTopicsToList</strong> 		<em>[integer]</em> 	max topics to list</li><li><strong>$excludeForumIdsList</strong> 	<em>[array]</em> 		lists of forum-ids to exclude</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>return an array with topics with these keys:<br /> <ul><li><strong>'topic_id'</strong>                        [integer]        topic unique id</li><li><strong>'forum_id'</strong>                        [integer]        parent topic forum id</li><li><strong>'topic_title'</strong>                    [string]        title of the topic</li><li><strong>'topic_poster'</strong>                    [integer]        topic's author id</li><li><strong>'topic_time'</strong>                    [integer]        topic creation date as unix time format</li><li><strong>'topic_views'</strong>                    [integer]        number of views of the topic</li><li><strong>'topic_replies_real'</strong>            [integer]        number of replies of the topic</li><li><strong>'topic_first_post_id'</strong>            [integer]        first post id of the topic</li><li><strong>'topic_first_poster_name'</strong>         [string]        author name of the topic</li><li><strong>'topic_last_post_id'</strong>            [integer]        last post id</li><li><strong>'topic_last_poster_id'</strong>            [integer]        last post author id</li><li><strong>'topic_last_poster_name'</strong>        [string]        last post author name</li><li><strong>'topic_last_post_time'</strong>            [integer]        last post creation date into the topic as unix time format</li><li><strong>'topic_poster'</strong>                    [string]        author of the topic (duplicate?)</li></ul></td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetTopicsFromForum" id="functiongetTopicsFromForum"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getTopicsFromForum</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 2915]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer getTopicsFromForum(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Get new posts/topics since a gived period. This method return paginated results, so you can display huge data in separated blocks.<br />
+</strong></p>
+<span class="description"><p>You need to login before using this method if you want to get items since your last login.<br />  You need to provide 4 parameters inside the $args array.<br />  Sorting options are taken from users options, when not logged it will take standard config board options.<br />  To create a new account you need to browse the board using a browser.<br /> <ul><li>[integer] 	<strong>$forum_id</strong> 			the id of the forum you want to list<br /></li><li>[integer] 	<strong>$pageIdx</strong> 			the number of page you want to see (default is 0)<br /></li><li>[integer] 	<strong>$topicsPerPage</strong> 		number of topics per page (default is 30)<br /></li><li>[string]	<strong>$forumPassword</strong> 		you need to specify a password if the forum is protected<br /></li><li>[string] 	<strong>$specificTopic</strong> 		specify a topic id to get only it (leave it null to get all forum's topics)</li><li>[integer] 	<strong>$logging_date</strong> 		specify user's logging date to get correct values for results key 'first_new_page','first_new_postid'
+                                  			(these values indicate first new post id, and first new post into the topic since specified date). Leave -1 to ignore.</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td><p><strong>ERRORS:</strong><br />                    --------------<br />                    <strong>MSG_FORUM_ERRNOFORUM</strong>             you have not specified a forum id<br />                    <strong>MSG_FORUM_ERR_UNEXISTINGFORUM</strong>     given forum id does not exist<br />                    <strong>MSG_FORUM_ERR_LOGINREQUIRED</strong>         login is required to show this forum<br />                    <strong>MSG_FORUM_ERR_CANNOTREAD</strong>         you have not enough privilegies to show this forum&lt;/br&gt;                    <strong>MSG_FORUM_ERR_FORUMPASSWORDED</strong>     forum is passworded you need to recall this function with pass                    <br />                    <strong>VALID RESULTS:</strong><br />                    --------------<br />                    If the forum is a link it will return a simple string with the link                    Otherwise this function return an array with two keys<br /> <ul><li><strong>'forum_info'</strong>     [array]     contains some infos about choosed forum with these keys:<br /><br /></li></ul>                         Keys:<br />                        <strong>'total_topics'</strong>         number of topics into the forum (total topics includes other pages)<br />                        <strong>'pages_number'</strong>         number of pages<br />                        <strong>'page_showed'</strong>         number of page showed<br />                        <strong>'forum_id'</strong>             id of showed forum<br />                        <strong>'parent_id'</strong>             id of parent forum (container)<br />                        <strong>'forum_name'</strong>         name of showed forum<br />                        <strong>'forum_desc'</strong>         description of the forum<br />                        <strong>'forum_image'</strong>         icon image of the forum<br />                    <br /></p><p><ul><li><strong>'topics'</strong>         [array]     list of displayed topics. Each row is an object with these keys:<br />
+                        Keys:<br />
+                       <strong>'bookmarked'</strong>                 is topic bookmarked by logged user? (boolean) (anonymous is obvisiuly false)
+                       <strong>'topic_id'</strong>                     id of the topic<br />
+                       <strong>'topic_title'</strong>                 title of the topic<br />
+                       <strong>'topic_poster'</strong>                 id of the author<br />
+                       <strong>'topic_time'</strong>                 date of creation in unix format<br />
+                       <strong>'topic_views'</strong>                 number of views<br />
+                       <strong>'topic_replies'</strong>                 number of replies to topic<br />
+                       <strong>'topic_status'</strong>                 status of topic<br />
+                       <strong>'topic_first_post_id'</strong>         id of the first message of the topic<br />
+                       <strong>'topic_first_poster_name'</strong>    name of the author of first message of the topic<br />
+                       <strong>'topic_last_post_id'</strong>         id of the last post in topic<br />
+                       <strong>'topic_last_poster_name'</strong>     name of the author of last reply on topic<br />
+                       <strong>'topic_last_post_time'</strong>         send date in unix format of last reply<br />
+                       <strong>'topic_last_view_time'</strong>         the time when last people has visited the topic in unix format<br />
+                       <strong>'first_new_page'</strong>             the first page you need to load the first new message (IF YOU HAVE SPECIFIED $logging_date)<br />
+                       <strong>'first_new_postid'</strong>             this the id of the first unread new post from the topic (IF YOU HAVE SPECIFIED $logging_date)<br /></li></ul></p></td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetTopicsMessages" id="functiongetTopicsMessages"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getTopicsMessages</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 1130]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><b>ERROR getTopicsMessages(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Use this function to read messages from a specified topic idr<br />
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>MESSAGES&lt;/b&gt;<br />             <strong>GENERAL_PASSWORDPROTECTED_ITEM</strong> password protected item<br />             <strong>LOGIN_FPSWD_ERR</strong> given password is wrong<br />             <strong>LOGIN_FPSWD_WRONGFORUMID</strong> wrong forum id<br />             <strong>GET_TOPICMSGS_NOTOPIC</strong> given topic id does not exist here<br />             <strong>GET_TOPICMSGS_NONEWERTOPICS</strong> no newer topics after current selection<br />             <strong>GET_TOPICMSGS_NOOLDERTOPICS</strong> no older topics before current selection<br />             <strong>GET_TOPICMSGS_NOTOPICDATA</strong> no data for this topic id<br />             <strong>GET_TOPICMSGS_AUTHREAD</strong> you have not authorization<br />             <strong>GET_TOPICMSGS_NOPOSTINTIMEFRAME</strong> time range does not contains posts<br />             <br />-----------------------------------------------------------<br /><br />             <strong>CORRECT VALUES</strong><br />             it returns an array with three main attributes:             <br /><br /> <ul><li><strong>'current_page'</strong>     [integer] current showed page of messages<br /></li><li><strong>'pages_number'</strong>     [integer] number of pages of the topic<br /></li><li><strong>'topic_infos'</strong>     [array] information about the topic and it's parent, contains these keys:<br /><br />
+                    <strong>'FORUM_ID'</strong>         [integer] parent forum id<br />
+                    <strong>'FORUM_NAME'</strong>        [string] parent forum name<br />
+                    <strong>'FORUM_DESC'</strong>        [string] parent forum description<br />
+                    <strong>'TOPIC_ID'</strong>         [integer] parent topic id<br />
+                    <strong>'TOPIC_TITLE'</strong>     [string] topic title<br />
+                    <strong>'TOPIC_POSTER'</strong>     [integer] topic author id<br />
+                    <strong>'TOPIC_AUTHOR'</strong>     [string] topic author name<br />
+                    <strong>'TOTAL_POSTS'</strong>     [integer] total posts in topic<br />
+                <br /></li><li><strong>'topic_messages'</strong> Each object (a message) contains these relevant keys:<br /><br />
+                <strong>'post_time'</strong>            [integer]    the post creation date <br />
+                <strong>'post_text'</strong>            [string]    the post message <br />
+                <strong>'post_username'</strong>        [string]    the post author name <br />
+                <strong>'poster_id'</strong>            [integer]    the post author id <br />
+                <strong>'post_id'</strong>            [integer]    the post id <br />
+                <strong>'forum_id'</strong>            [integer]    parent forum id <br />
+                <strong>'topic_id'</strong>            [integer]    parent topic id <br />
+                <strong>'poster_avatar'</strong>        [string]    link to avatar img <br />
+                <strong>'poster_joined'</strong>        [integer]    poster joined date as unix time format <br />
+                <strong>'poster_posts'</strong>        [integer]    poster number of posts <br />
+                <strong>'signature'</strong>            [string]    poster signature <br />
+                <strong>'post_subject'</strong>        [string]    post subject <br /></li></ul></td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetTopicWithID" id="functiongetTopicWithID"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">getTopicWithID</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 43]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getTopicWithID(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This method return a specif topic information.
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li><strong>$forum_id</strong> 	<em>[integer]</em> 	Forum id of target topic</li><li><strong>$topic_id</strong> 	<em>[integer]</em> 	Target topic id</li><li><strong>$password</strong> 	<em>[string]</em> 	Password if the topic is password protected (leave it '' if no password is required)</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td>see <em>getTopicsFromForum</em> method to read the result format</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION DON'T REQUIRE LOGIN</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.1</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functiongetUnansweredPosts" id="functiongetUnansweredPosts"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">getUnansweredPosts</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 707]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>dictionary getUnansweredPosts(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Returns unanswered posts or topics into the board since specified number of days.<br />
+</strong></p>
+<span class="description"><p>You need to setup $args array with this list of ordered parameters: <ul><li><strong>$show_results</strong> <em>[string]</em> can be <em>'posts'</em> to return flat list of unanswered posts or <em>'topics'</em> to get the list of unanswered topics</li><li><strong>$sort_days</strong> <em>[integer]</em> return articles since last n days (null to get all the list since board found... it's a very expensive query)</li><li><strong>$pageIdx</strong> <em>[integer]</em> the page you want to show</li><li><strong>$itemsPerPage</strong> <em>[integer]</em> items per page</li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td><p>This function return a dictionary with these keys: <ul><li><strong>'page_showed'</strong> the page you have showed</li><li><strong>'total_pages'</strong> the number of pages</li><li><strong>'total_items'</strong> the number of items in all pages</li><li><strong>'items'</strong> an array where each object is a topic with these keys based upon $show_results:</li></ul>                    <strong>IF $show_results = 'POSTS'</strong><br />                    ----------------------------------------------<br />                    <strong>'post_id'</strong> [integer] target post id<br />                    <strong>'forum_id'</strong> [integer] parent forum id of the topics<br />                    <strong>'post_time'</strong> [long integer] message posting date in unix format<br />                    <strong>'post_subject'</strong> [string] subject of post<br />                    <strong>'post_edit_time'</strong> [long integer] message editing date (if available) in unix format<br />                    <strong>'post_edit_user'</strong> [integer] id of the editor (if available)<br />                    <br />                    <br /></p><p><strong>IF $show_results = 'TOPICS'</strong><br />                    ----------------------------------------------<br />                    If valid it returns an array where each object is a topic with these keys:                    <br />                    <strong>'forum_id'</strong> [integer] parent forum id of topic<br />                    <strong>'topic_id'</strong> [integer] topic id <br />                    <strong>'topic_title'</strong> [string] title of the topic<br />                    <strong>'topic_poster'</strong> [integer] author id of topic<br />                    <strong>'topic_time'</strong> [long integer] posting date of the first message (unix time)<br />                    <strong>'topic_views'</strong> [integer] views of the topic<br />                    <strong>'topic_replies_real'</strong> [integer] number of replies into the topic<br />                    <strong>'topic_first_post_id'</strong> [integer] the post id of the first post<br />                    <strong>'topic_first_poster_name'</strong> [string] author of the topic (first post author)<br />                    <strong>'topic_last_post_id'</strong> [integer] the id of the last post into the topic<br />                    <strong>'topic_last_poster_id'</strong> [integer] the author id of the last reply message of the topic<br />                    <strong>'topic_last_poster_name'</strong> [string] the author name of the last reply message of the topic<br />                    <strong>'topic_last_post_time'</strong> [long integer] the last post date in unix time<br /></p></td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>See:</strong>&nbsp;&nbsp;</td><td>THIS FUNCTION REQUIRE YOU ARE LOGGED (OTHERWISE IT WILL RETURN GENERAL_ERR_MUSTLOGGED)</td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionsearchInsideBoard" id="functionsearchInsideBoard"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">searchInsideBoard</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 3371]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer searchInsideBoard(
+ $args&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>This method allows you to search inside the board messages and topics.<br />
+</strong></p>
+<span class="description"><p><br /><strong>PARAMETERS:</strong><br /> <ul><li>[integer] 	<strong>$resultsType</strong> 		results object: <em>'topics'</em> or <em>'posts'</em></li><li>[integer] 	<strong>$pgIdx</strong> 				the number of page you want to see (default is 0)<br /></li><li>[integer] 	<strong>$itemsPerPage</strong> 		number of topics/posts per page (default is 100)<br /></li><li>[integer]	<strong>$searchInTopicID</strong> 	specify a topic id if you want to limit search inside a specific topic<br /></li><li>[array] 	<strong>$searchInForumsIDs</strong> 	specify an array of forum ids objects if you want to limit the search inside a range of forums (array() to search in all forums)<br /></li><li>[string] 	<strong>$keywordsToSearch</strong> 	words to search<br /></li><li>[boolean] 	<strong>$searchAnyWord</strong> 		search any term (false) or all words (true)<br /></li><li>[string] 	<strong>$searchWhere</strong> 		<em>'all'</em> (both title and message's text), <em>'firstpost'</em> (only in first topic post), <em>'titleonly'</em> (only in topic's titles), <em>'msgonly'</em> (only in post's body)<br /></li><li>[boolean] 	<strong>$searchInSubForums</strong> 	search in sub forums?<br /></li><li>[string] 	<strong>$orderResultsBy</strong> 		<em>'t'</em> (post's time), <em>'a'</em> (post's author name), <em>'f'</em> (by forum group), <em>'i'</em> (argument title), <em>'s'</em> (message's title) <br /></li><li>[string] 	<strong>$orderDirection</strong> 		<em>'a'</em> (ascending order), <em>'d'</em> (descending) <br /></li><li>[integer] 	<strong>$resultsToReturn</strong> 	number of max results to return (-1 to unlimited) <br /></li><li>[integer] 	<strong>$limitDays</strong> 			limit results search (30 = one month is the default value) <br /></li></ul></p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$args:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	<strong>API Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Return:</strong>&nbsp;&nbsp;</td><td><strong>ERRORS:</strong><br />                    --------------<br />                     SEARCH_NOT_ALLOWED SEARCH_NOT_CURRENTLY_AVAILABLE,SEARCH_DISABLED_FLOODED,SEARCH_AUTHORFIELD_TOOSHORT,                     SEARCH_AUTHORFIELD_NOTVALIDNAMES,SEARCH_NO_SEARCHMODULE,SEARCH_GENERAL_ERROR                     SEARCH_NO_KEYWORDS_TOSEARCH,SEARCH_NO_RESULTS                    <br />                    <strong>VALID RESULTS:</strong><br />                    --------------<br />                     if 'resultsType' is 'TOPICS' it will return an array with these keys:<br />                        <strong>'bookmarked'</strong>                 is topic bookmarked by logged user? (boolean) (anonymous is obvisiuly false)                        <strong>'topic_id'</strong>                     id of the topic<br />                        <strong>'topic_title'</strong>                 title of the topic<br />                        <strong>'topic_poster'</strong>                 id of the author<br />                        <strong>'topic_time'</strong>                 date of creation in unix format<br />                        <strong>'topic_views'</strong>                 number of views<br />                        <strong>'topic_replies_real'</strong>         number of replies to topic<br />                        <strong>'topic_status'</strong>                 status of topic<br />                        <strong>'topic_first_post_id'</strong>         id of the first message of the topic<br />                        <strong>'topic_first_poster_name'</strong>    name of the author of first message of the topic<br />                        <strong>'topic_last_post_id'</strong>         id of the last post in topic<br />                        <strong>'topic_last_poster_name'</strong>     name of the author of last reply on topic<br />                        <strong>'topic_last_post_time'</strong>         send date in unix format of last reply<br />                    --------------<br />                     if 'resultsType' is 'POSTS' it will return an array with these keys:<br />                        <strong>'post_time'</strong>                     post creation date<br />                        <strong>'post_text'</strong>                     post text<br />                        <strong>'post_username'</strong>                 post username<br />                        <strong>'poster_id'</strong>                     post user id<br />                        <strong>'forum_id'</strong>                     parent forum id<br />                        <strong>'post_subject'</strong>                 post subject<br />                        <strong>'post_id'</strong>                     post id<br /></td>
+  </tr>
+</table>
+<br />
+
+<strong>Information Tags:</strong><br />
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="indent"><strong>Version:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+  <tr>
+    <td class="indent"><strong>Since:</strong>&nbsp;&nbsp;</td><td>1.0</td>
+  </tr>
+</table>
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_countTopicInQuery" id="function_countTopicInQuery"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">_countTopicInQuery</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 649]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _countTopicInQuery(
+ $sqlConditionPart,  $countWhatKey&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$sqlConditionPart:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$countWhatKey:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_createListFromGivenTopics" id="function_createListFromGivenTopics"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">_createListFromGivenTopics</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 980]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _createListFromGivenTopics(
+ $result&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$result:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_getTopicMessages" id="function_getTopicMessages"><!-- --></a>
+<div class="evenrow">
+
+	<div>
+		<span class="method-title">_getTopicMessages</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 1137]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _getTopicMessages(
+[ $forum_id = 0], [ $topic_id = 0], [ $post_id = 0], [ $voted_id = array(&#039;&#039; =&amp;gt; 0)], [ $start = 0], [ $view = &#039;&#039;], [ $sort_days = 0], [ $sort_key = &#039;t&#039;], [ $sort_dir = &#039;a&#039;], [ $update = false], [ $hilit_words = &#039;&#039;], [ $password = &#039;&#039;], [ $itemsPerPage = 10]&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$forum_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$topic_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$post_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$voted_id:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$start:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$view:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$sort_days:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$sort_key:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$sort_dir:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$update:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$hilit_words:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$password:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$itemsPerPage:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="function_searchInsideBoard" id="function_searchInsideBoard"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">_searchInsideBoard</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 3378]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void _searchInsideBoard(
+[ $resultsType = &#039;topics&#039;], [ $pgIdx = 0], [ $itemsPerPage = 100], [ $searchInTopicID = 0], [ $searchInForumsIDs = array(0)], [ $keywordsToSearch = &#039;&#039;], [ $searchForAuthorName = &#039;&#039;], [ $searchAnyWord = false], [ $searchWhere = &#039;all&#039;], [ $searchInSubForums = true], [ $orderResultsBy = &#039;t&#039;], [ $orderDirection = &#039;d&#039;], [ $resultsToReturn = 300], [ $limitDays = 30]&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$resultsType:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$pgIdx:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$itemsPerPage:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$searchInTopicID:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$searchInForumsIDs:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$keywordsToSearch:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$searchForAuthorName:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$searchAnyWord:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$searchWhere:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$searchInSubForums:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$orderResultsBy:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$orderDirection:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$resultsToReturn:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$limitDays:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+		</div>
+	</div><br />
+
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 30 Jul 2008 11:02:32 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.1</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
