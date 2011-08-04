@@ -20,7 +20,7 @@ open source.
 
 How to install OFAPI?
 ---------------------
-OFAPI is pretty simple to install: just drag & drop OFAPI folder (where this file is contained) in your root forum directory. 
+OFAPI is pretty simple to install: just execute `git clone git://github.com/wankdanker/ofapi.git` in your phpBB root.
 Next... no wait there is not any other step. You are done!
 
 
@@ -44,7 +44,12 @@ Remember: when called function parameters are lower than minimal requested numbe
 result of call.
 
 Copyright
---------
+---------
 OFAPI was created by Daniele Margutti and Roberto Beretta and the source code is based upon the original phpBB 3 code. 
 The project is distribuited under GPL (General Public License). If you use OFAPI in your forum fell free to write some 
 lines about the authors.
+
+Origin
+------
+I found this code at http://code.google.com/p/ofapi/. It had not been touched since September, 2008. I figured it could
+use a little JSON and github love.
